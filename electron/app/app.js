@@ -1,4 +1,4 @@
-const ipc = require('electron').ipcRenderer
+const ipc = require('electron').ipcRenderer;
 
 
 
@@ -29,7 +29,7 @@ app.controller("mainCtrl", ["$scope", function($scope) {
     vm.openFile = function() {
 
         //ipc.send('open-information-dialog')
-        ipc.send('open-file-dialog')
+        ipc.send('open-file-dialog');
     };
 
     vm.showItem = function(item) {
@@ -45,7 +45,7 @@ app.controller("mainCtrl", ["$scope", function($scope) {
                         if (ret.$.value != undefined) {
                             ret = ret.$.value;
                         } else if (ret.$.x != undefined) {
-                            ret = "X=" + ret.$.x + " Y=" + ret.$.y + " Z=" + ret.$.z
+                            ret = "X=" + ret.$.x + " Y=" + ret.$.y + " Z=" + ret.$.z;
                         }
 
 

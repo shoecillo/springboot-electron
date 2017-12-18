@@ -1,3 +1,4 @@
+
 const electron = require('electron')
     // Module to control application life.
 const app = electron.app
@@ -18,7 +19,7 @@ const spawn = require('child_process').spawn;
 
 var out = fs.openSync('./out.log', 'a');
 var err = fs.openSync('./out.log', 'a');
-var child = spawn('java', ['-jar', __dirname + '/jar/ArkSaveManager.jar'], {
+var child = spawn('java', ['-jar', __dirname + '/jar/springboot-electron.jar'], {
   detached: true,
   stdio: ['ignore', out, err]
 });
@@ -101,7 +102,7 @@ ipc.on('open-file-dialog', function(event) {
     }, function(files) {
         if (files) {
             var file = files[0]
-            console.log(file)
+            console.log(file);
             fs.readFile(file, 'utf-8', function(err, data) {
                 if (err) {
                     event.sender.send('selected-directory', err)

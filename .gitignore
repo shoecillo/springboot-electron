@@ -21,4 +21,4 @@ electron/node/
 electron/node_modules/
 electron/springboot-electron-win32-x64/
 electron/jar/
-
+electron/*.log

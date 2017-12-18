@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div style="overflow : auto;height: 300px;">
-                            <p ng-repeat="item in selectedHandling" ng-click="showItem(item)">{{item.handlingName[0]}}</p>
+                            {{selectedItem}}
                         </div>
                     </div>
                 </div>
@@ -37,6 +37,7 @@
 
     <script src="node_modules/angular/angular.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/services/springboot-bridge.js"></script>
     <script>
         // You can also require other files to run in this process
         require('./renderer.js');

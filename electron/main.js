@@ -50,7 +50,7 @@ function createWindow() {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
-        mainWindow = null
+        mainWindow = null;
     });
 }
 
@@ -100,22 +100,10 @@ ipc.on('open-file-dialog', function(event) {
     dialog.showOpenDialog({
         properties: ['openFile']
     }, function(files) {
-        if (files) {
+        if (files) 
+        {
             var file = files[0];
-            console.log(file);
-            fs.readFile(file, 'utf-8', function(err, data) {
-                if (err) {
-                    event.sender.send('selected-directory', err);
-                    return;
-                } else {
-                    var parser = new xml2js.Parser();
-                    parser.parseString(data, function(err, result) {
-
-                        event.sender.send('selected-directory', result);
-                    });
-                }
-            })
-
+            event.sender.send('selected-directory', file);
         }
     })
 })

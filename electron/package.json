@@ -1,0 +1,36 @@
+{
+    "name": "springboot-electron",
+    "version": "1.0.0",
+    "description": "A minimal Electron application with SpringBoot backend",
+    "dependencies": {
+    
+        "electron": "~1.7.8",
+        "xml2js": "~0.4.19",
+        "gulp" : "~3.9.1",
+        "electron-packager" : "~10.1.0",
+        "angular": "~1.6.6",
+        "bootstrap": "~3.3.5",
+        "@uirouter/angularjs": "~1.0.11",
+        "jquery": "~3.2.1",
+        "angular-ui-bootstrap": "~2.5.0"
+        
+    },
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "pack" :"electron-packager ."
+    },
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "~1.7.8"
+
+    }
+}

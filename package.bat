@@ -1,0 +1,3 @@
+
+cd electron
+electron-packager .

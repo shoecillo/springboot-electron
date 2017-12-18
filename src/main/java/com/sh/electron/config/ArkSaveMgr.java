@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @RestController
 @SpringBootApplication
 public class ArkSaveMgr {
@@ -18,7 +20,8 @@ public class ArkSaveMgr {
 	@GetMapping("/hi/{name}")
 	public String hi(@PathVariable String name)
 	{
-		return "Hi ".concat(name);
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper.createObjectNode().put("greet", "Hi ".concat(name)).toString();
 	}
 	
 }
